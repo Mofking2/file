@@ -145,8 +145,9 @@ h6 {
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
- /* background-color: var(--background-color);*/
- background-color: transparent;
+ background-color: var(--background-color);
+ /*  background-color: transparent;*/
+
  /*border-bottom: 0.5px solid grey;*/
   padding: 15px 0;
   transition: all 0.5s;
