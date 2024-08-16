@@ -141,7 +141,7 @@ h6 {
   - Global Header -
 -------------------------------------------*/
 .header {
-  --background-color: rgba(0, 0, 0, 0.5);
+  --background-color: rgba(0, 0, 0, 0.8);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -859,7 +859,7 @@ section,
 
 .hero .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 80%);
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -867,7 +867,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
 }
@@ -908,13 +908,7 @@ section,
     font-size: 15px;
 
   }
-  .hero .carousel-item:before {
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
-}
-
-.hero .carousel-item::before {
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
-}
+ 
 
 }
 
