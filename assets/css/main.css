@@ -195,7 +195,6 @@ h6 {
 .scrolled .header {
   /*--background-color: #000000;*/
   background-color: #010203;
-  background-color: transparent 70%;
   border-bottom: none;
 
 }
@@ -869,7 +868,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
 }
