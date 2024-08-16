@@ -908,6 +908,15 @@ section,
     font-size: 15px;
 
   }
+  .hero .carousel-item:before {
+    background: color-mix(in srgb, var(--background-color), transparent 30%);
+  }
+  
+  .hero .carousel-item::before {
+    
+    background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+   
+  }
 
 }
 
