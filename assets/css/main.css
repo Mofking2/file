@@ -49,7 +49,37 @@
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
+.dark {
+  --background-color: #060606;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+  font-weight: 400;
 
+}
+.page-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  object-position: center; /* Centers the image */
+  z-index: -1; /* Places the image behind other content */
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.page-title .title-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  object-position: center; /* Centers the image */
+  z-index: -1; /* Places the image behind other content */
+  
+}
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -738,10 +768,18 @@ h6 {
   flex-wrap: wrap;
   list-style: none;
   justify-content: left;
-  padding: 0;
+  padding-top: 60px;
   margin: 0;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+}
+@media (max-width: 1199px) {
+
+  .page-title .breadcrumbs ol {
+   
+    padding-top: 120px;
+    
+  }
 }
 .page-title h1  {
   display: flex;
@@ -835,6 +873,7 @@ section,
   min-height: 100vh;
   padding: 0;
   margin: 0;
+  /**/
   background-color: var(--background-color);
   position: relative;
 }
@@ -860,7 +899,7 @@ section,
 
 .hero .carousel-item:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  background: color-mix(in srgb, var(--background-color), transparent 80%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -868,7 +907,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 80%);
   position: absolute;
   inset: 0;
 }
