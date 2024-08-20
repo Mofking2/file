@@ -196,6 +196,29 @@ to confidently navigate international platforms and share their stories with the
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <!-- Adding the audio funtion, making it mute and unmute-->
+  <script>
+    const audio = new Audio('assets/audio/piano.mp3');
+    const button = document.getElementById('audioButton');
+
+      //Allow the sound to repeat
+    audio.loop = true;
+
+      // Set the volume to a lower level (e.g., 10%)
+    audio.volume = 0.32; // Set volume to 10% (0.0 to 1.0)
+
+    //Check is the button is pressed or note
+    button.onclick = function() {
+        if (audio.paused) {
+            audio.play();
+            button.className = 'icon unmute'; // Show unmute icon
+        } else {
+            audio.muted = !audio.muted;
+            button.className = audio.muted ? 'icon mute' : 'icon unmute'; // Toggle between mute/unmute icons
+        }
+    };
+</script>
+
  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
