@@ -530,13 +530,13 @@ h6 {
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
-  background: color-mix(in srgb, var(--default-color), transparent 98%);
+  background: color-mix(in srgb, var(--default-color), transparent 99%);
   padding: 30px;
   border-radius: 10px;
 }
 
 .contact .info-itemAddress {
-  background: color-mix(in srgb, var(--default-color), transparent 98%);
+  background: color-mix(in srgb, var(--default-color), transparent 99%);
   padding: 30px;
   border-radius: 10px;
 }
