@@ -4,9 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Ol AFrika eBusiness Website </title>
+  <title>Service Details - eBusiness Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+
+  <!-- Leatlet Map Link-->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"  >
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -36,43 +39,44 @@
   ======================================================== -->
 </head>
 
-<body class="starter-page-page">
+<body class="service-details-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/Logo-removebg-preview.png" alt="">
-        <!-- <h1 class="sitename">olAfrika</h1> -->
+        <img src="assets/img/Logo-removebg-preview.png" alt=""> 
+        <!-- <h1 class="sitename">eBusiness</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="discover_Us.html">Discover Us</a></li>
           <li><a href="What_We_do.html">What we do</a></li>
           <li><a href="inspiration_Gallery.html">Inspiration Gallery</a></li>
           <li><a href="Blog_Real.html">Blog</a></li>
-          <li><a href="#portfolio">News</a></li>
+          <li><a href="#team">News</a></li>
           <li class="dropdown"><a href="#"><span>Opportunities</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">careers</a></li>
               <li class="dropdown"><a href="#"><span>External Post</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="#">Sir Juice Post</a></li>
+     
                 </ul>
               </li>
+              <li><a href="#">Careers</a></li>
+             
             </ul>
           </li>
-          <li><a href="connect_with_us.html">Connect with Us</a></li>
           <li><a class="get-started"  href="#contact">Donate</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-               <!-- Button with default icon class for unmute -->
+        <!-- Button with default icon class for unmute -->
     <button id="audioButton" class="icon unmute"></button>
       </nav>
-
-
 
     </div>
   </header>
@@ -81,128 +85,141 @@
 
     <!-- Page Title -->
     <div class="page-title dark ">
-      <img class="title-bg" src="assets/img/moving_PeopleCity.jpg" alt="">
+      <img class="title-bg" src="assets/img/connect_with_us.jpg" alt="">
       <div class="container position-relative">
         
   
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">About Us</li>
+            <li class="current">Connect with us</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
+     <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Discover Us</h2>
-        <p>OL Afrika Media Foundation, a 100% black, female and youth led 
-Multimedia non-profit established in 2016. we are more than just a 
-multimedia non-profit; we are a catalyst for change, empowerment, and 
-cultural enrichment. With a firm commitment to Africa's vibrant narrative, 
-Our mission is to nurture and elevate the next generation of creatives and 
-storytellers, empowering them to share their voices on a global stage. 
-Through comprehensive training programs, internships, and learnerships, 
-we provide young people with the skills and opportunities they need to 
-succeed in diverse career paths, ranging from multimedia to business, 
-finance and ICT opportunities that support our multimedia sector. </p>
+        <h2>Contact Us</h2>
+       
       </div><!-- End Section Title -->
 
-       <!-- Section Title Below -->
-       <div class="container section-title" data-aos="fade-up">
-        <p> Our focus on youth development extends beyond skill-building; we are 
-dedicated to instilling confidence and resilience in the Black child of South 
-Africa, equipping them to navigate both local and international landscapes 
-with ease. Central to our vision is the belief in the power of African stories 
-to captivate and inspire audiences worldwide. Through our support of 
-emerging musicians and creators, we ensure that their voices are heard 
-and their talent recognized on international platforms. At the heart of our 
-work lies our tagline, <b>Afrika to the World</b>, encapsulating our dedication to 
-amplifying African narratives and fostering connections that transcend 
-borders.</p>
-      </div><!-- End Section Title Below -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-  <div class="container section-title" data-aos="fade-up">
-        <h2 class="reduce">Vision</h2>
-        <p>To be the premier platform for South African creatives, bridging continents and 
-cultures through multimedia storytelling and youth empowerment initiatives. 
-</p>
-      </div>
-            <div class="container section-title" data-aos="fade-up">
-        <h2 class="reduce">Mission</h2>
-        <p>We are dedicated to empowering South African youth through multimedia education, 
-career development, and the promotion of African narratives on the global stage. 
-Through Accredited Skills training, internships, learnerships, workshops and support 
-for emerging artists, we strive to prepare the next generation of South African talent 
-to confidently navigate international platforms and share their stories with the world. 
-</p>
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+            <div class="col-md-6">
+    <div class="info-itemAddress" data-aos="fade" data-aos-delay="200" style="position: relative;" style="width: 100%; height: 400px; ">
+        <!-- Leaflet Map Container -->
+        <div id="map" style="width: 100%; height: 203px; border-radius: 10px;"></div>
+
+        <!-- Address Information (Text Overlay) -->
+        <div class="overlay-text" style="position: absolute; top: 10px; left: 20px; color: white;">
+            <i class="bi bi-geo-alt"></i>
+            <h3>Address</h3>
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+        </div>
+    </div>
+</div><!-- End Info Item -->
+
+                <br>
+                <br><br><br><br><br><br><br><br>
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                  <p>+1 6678 254445 41</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com</p>
+                  <p>contact@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="col-md-6">
+                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                  <i class="bi bi-clock"></i>
+                  <h3>Open Hours</h3>
+                  <p>Monday - Friday</p>
+                  <p>9:00AM - 05:00PM</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
       </div>
 
-    </section><!-- /Starter Section Section -->
+    </section><!-- /Contact Section -->
 
   </main>
 
   <footer id="footer" class="footer dark-background">
 
 
-      <!-- Usefull Links and follow us-->
+
     <div class="container footer-top">
-      <div class="row gy-4">
-        
-
-        <!-- Useful links, services
-
-             <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div>
-         -->
        
 
+   
+
         <div class="col-lg-4 col-md-12">
-          
-          <!--<h4>Follow Us</h4>
+          <h4>Follow Us</h4>
           <div class="social-links d-flex">
-            
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>-->
-          <!--  Location and contact
-                <div class="col-lg-4 col-md-6 footer-about">
-            <div class="footer-contact pt-3">
-              
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
-            </div>
           </div>
-          -->
-          
         </div>
-
-
 
       </div>
     </div>
@@ -219,11 +236,13 @@ to confidently navigate international platforms and share their stories with the
     </div>
 
   </footer>
-<!-- Scroll Top -->
+
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
 
   <!-- Adding the audio funtion, making it mute and unmute-->
   <script>
@@ -248,7 +267,24 @@ to confidently navigate international platforms and share their stories with the
     };
 </script>
 
- 
+<!--Map Js Framework-->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" ></script>
+<!-- Se3tting the map and desiplay-->
+<script>
+    // Initialize the map and set its view to the chosen geographical coordinates and zoom level
+    var map = L.map('map').setView([-26.2041, 28.0473], 13); // Example coordinates for Johannesburg
+
+    // Load and display a tile layer on the map (OpenStreetMap tiles)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker to the map at the given coordinates
+    var marker = L.marker([-26.2041, 28.0473]).addTo(map)
+        .bindPopup('<b>Johannesburg</b><br />South Africa.').openPopup();
+</script>
+
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
