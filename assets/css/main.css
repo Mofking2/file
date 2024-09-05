@@ -1388,7 +1388,11 @@ section,
   border: 1px solid #f3df26;
   background: rgba(250, 208, 71, 0.1);
 }
-
+.services .service-item.item-red .icon {
+  color: black;
+  border: 1px solid red;
+  background: rgba(255, 102, 102, 0.1);
+}
 .services .service-item:hover {
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
 }
