@@ -96,14 +96,14 @@
         <div class="carousel-item">
           <img src="assets/img/hero-carousel/hero_people_cityMoving.jpg" alt="">
           <div class="carousel-container">
-            <h2>Creative Media for the world</h2>
+            <h2 id="typed"></h2>
           </div>
         </div><!-- End Carousel Item -->
 
         <div class="carousel-item">
           <img src="assets/img/hero-carousel/hero-carousel-Building1.jpg" alt="">
           <div class="carousel-container">
-            <h2>Creative space that inspire</h2>
+            <h2 id="typed1"></h2>
           </div>
         </div><!-- End Carousel Item -->
 
@@ -229,6 +229,48 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!--The animated typed text on the index carouses-->
+
+  <!--This for the second text on the carousel/#Creative Media for the world-->
+   <!-- Include Typed.js from CDN -->
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+   <script>
+       // Initialize Typed.js
+       var options = {
+           strings: [
+               "Creative Media for the world",
+              
+           ],
+           typeSpeed: 40, // Typing speed in milliseconds
+           backSpeed: 20, // Backspacing speed
+           loop: true, // Loop through the texts
+           backDelay: 3500, // Time before backspacing
+           showCursor: false // Remove the blinking cursor
+       };
+
+       // Create Typed instance and attach to element
+       var typed = new Typed("#typed", options);
+   </script>
+
+   <!--For the Last carousel/#-->
+   <script>
+    // Initialize Typed.js
+    var options = {
+        strings: [
+            "Creative space that inspire ",
+           
+        ],
+        typeSpeed: 40, // Typing speed in milliseconds
+        backSpeed: 20, // Backspacing speed
+        loop: true, // Loop through the texts
+        backDelay: 3500, // Time before backspacing
+        showCursor: false // Remove the blinking cursor
+    };
+
+    // Create Typed instance and attach to element
+    var typed = new Typed("#typed1", options);
+</script>
 </body>
 
 </html>
