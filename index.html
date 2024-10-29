@@ -80,14 +80,14 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4800">
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
 
         <div class="carousel-item active">
           <img src="assets/img/hero-carousel/Mic.jpg" alt="">
           <div class="carousel-container">
             <!--<h2>OlAfrika Media Foundation</h2> -->
             <h2>OlAfrika Media </h2>
-            <p>Afrika to the world</p>
+            <p>Afrika to the world.</p>
             <hr class="btn-get-started">
             <!--<a href="#featured-services" class="btn-get-started"><b>Get Started</b></a>-->
           </div>
@@ -230,47 +230,51 @@
   <script src="assets/js/main.js"></script>
 
   <!--The animated typed text on the index carouses-->
+  <!--The Second and third text of the carousel-->
 
-  <!--This for the second text on the carousel/#Creative Media for the world-->
-   <!-- Include Typed.js from CDN -->
-   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Include Typed.js from CDN(link) -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-   <script>
-       // Initialize Typed.js
-       var options = {
-           strings: [
-               "Creative Media for the world",
-              
-           ],
-           typeSpeed: 45, // Typing speed in milliseconds
-           backSpeed: 25, // Backspacing speed
-           loop: true, // Loop through the texts
-           backDelay: 3500, // Time before backspacing
-           showCursor: false // Remove the blinking cursor
-       };
+<script>
+  // Initialize typed instances
+  var typed;
+  var typed1;
 
-       // Create Typed instance and attach to element
-       var typed = new Typed("#typed", options);
-   </script>
+  // Function to start typing animation
+  function startTypedAnimation(selector, text, typeSpeed, loop = false) {
+      // Destroy any existing Typed instance
+      if (typed) {
+          typed.destroy();
+      }
+      if (typed1) {
+          typed1.destroy();
+      }
 
-   <!--For the Last carousel/#-->
-   <script>
-    // Initialize Typed.js
-    var options = {
-        strings: [
-            "Creative space that inspire ",
-           
-        ],
-        typeSpeed: 45, // Typing speed in milliseconds
-        backSpeed: 25, // Backspacing speed
-        loop: true, // Loop through the texts
-        backDelay: 3500, // Time before backspacing
-        showCursor: false // Remove the blinking cursor
-    };
+      return new Typed(selector, {
+          strings: [text],
+          typeSpeed: typeSpeed,
+          loop: loop,
+          showCursor: false
+      });
+  }
 
-    // Create Typed instance and attach to element
-    var typed = new Typed("#typed1", options);
+  // Listen for when a slide finishes sliding
+  document.getElementById('hero-carousel').addEventListener('slid.bs.carousel', function (e) {
+      // Get the active slide
+      var activeIndex = e.to;
+
+      // Check which slide is active (0 for the first, 1 for the second, 2 for the third, etc.)
+      if (activeIndex === 1) {
+          // Start typed animation for the second slide
+          typed = startTypedAnimation("#typed", "Creative Media for the world.", 78, false);
+      } else if (activeIndex === 2) {
+          // Start typed animation for the third slide
+          typed1 = startTypedAnimation("#typed1", "Creative space that inspire.", 78, false);
+      }
+  });
 </script>
+
+
 </body>
 
 </html>
